@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+    <title>Tarea 3 con ionic</title>
+  </head>
+  <body>
+    <ion-menu content-id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menú</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding"
+        ><ion-list>
+          <ion-item href="./index.html">Inicio</ion-item>
+          <ion-item href="./adder.html">Sumadora</ion-item>
+          <ion-item href="./numbersToLetters.html"
+            >Traductor Números &rarr; Letras</ion-item
+          >
+          <ion-item href="./multiplicationTable.html"
+            >Tabla de Multiplicar</ion-item
+          >
+          <ion-item href="./personalExperience.html"
+            >Experiencia Personal</ion-item
+          >
+        </ion-list></ion-content
+      >
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Sumadora</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-grid>
+          <ion-row>
+            <ion-col size-md="4" offset-md="4">
+              <ion-card>
+                <ion-card-header color="tertiary">
+                  <ion-card-title>
+                    Ingrese los dos números que desea sumar
+                  </ion-card-title>
+                </ion-card-header>
+                <ion-card-content id="content">
+                  <ion-item>
+                    <ion-label position="stacked">Número 1</ion-label>
+                    <ion-input type="number" id="number1"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label position="stacked">Número 2</ion-label>
+                    <ion-input type="number" id="number2"></ion-input>
+                  </ion-item>
+
+                  <ion-button
+                    id="button-sum"
+                    color="tertiary"
+                    class="ion-margin-vertical"
+                  >
+                    <ion-icon name="calculator" slot="start"></ion-icon> Sumar
+                  </ion-button>
+                  <ion-button
+                    id="button-clear"
+                    color="danger"
+                    fill="outline"
+                    class="ion-margin-vertical"
+                  >
+                    <ion-icon name="close-outline"></ion-icon>
+                    Limpiar
+                  </ion-button>
+
+                  <ion-item>
+                    <ion-text>
+                      <h1>
+                        <ion-label id="result" class="text-large"></ion-label>
+                      </h1>
+                    </ion-text>
+                  </ion-item>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-content>
+    </div>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <script type="module" src="../js/adder.js"></script>
+  </body>
+</html>
